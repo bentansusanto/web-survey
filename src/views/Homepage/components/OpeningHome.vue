@@ -29,10 +29,13 @@
           </li>
         </ul>
       </div>
-      <b-button variant="dark align-items-center d-flex button-survei">
+      <b-button variant="dark align-items-center d-flex button-survei mt-5">
         <img src="../../../assets/Send.svg" alt="" />
         <p class="font-weight-bold ml-2 pt-3 text-capitalize">Mulai survey</p>
       </b-button>
+    </div>
+    <div class="bg-logo">
+      <img src="../../../assets/logo-client.svg" alt="logo-client.svg" />
     </div>
   </div>
 </template>
@@ -44,11 +47,12 @@ export default {};
 <style lang="scss" scoped>
 .bg-opening {
   background-color: rgb(170, 5, 5);
-  height: 90vh;
+  height: 85vh;
+  position: relative;
 }
 
 .content {
-  padding: 7rem 5rem;
+  padding: 7rem 4rem;
 }
 
 .button-survei {
@@ -58,5 +62,14 @@ export default {};
 
 .button-survei:hover {
   background-color: #000;
+}
+
+.bg-logo {
+  position: absolute;
+  right: 0;
+  bottom: -25px;
+  background-color: white;
+  width: 12rem;
+  padding: 3px;
 }
 </style>

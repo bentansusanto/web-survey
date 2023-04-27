@@ -4,6 +4,7 @@
       <SideNav />
       <ContentView />
     </div>
+    <div class="bg-list"></div>
   </div>
 </template>
 
@@ -23,5 +24,11 @@ export default {
 .grid-component {
   display: flex;
   flex-direction: row;
+}
+
+.bg-list {
+  background-color: #d1d1d1;
+  width: 100vw;
+  height: 5vh;
 }
 </style>

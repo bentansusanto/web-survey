@@ -10,6 +10,6 @@ export default {};
 .side-background {
   background: #770000;
   width: 30vw;
-  height: 100vh;
+  height: 95vh;
 }
 </style>

@@ -30,23 +30,25 @@
             {{ questionComponents.length }}
           </p>
         </div>
-        <!-- Content question here -->
-        <component :is="questionComponents[currentPage]" />
-        <!-- Button -->
-        <div class="btn">
-          <b-button
-            @click="prevPage()"
-            v-show="currentPage !== 0"
-            variant="danger"
-            class="font-weight-bold"
-            >Kembali</b-button
-          >
-          <b-button
-            @click="nextPage()"
-            variant="danger"
-            :class="{ 'right-align': currentPage === 0 }"
-            >Lanjut</b-button
-          >
+        <div class="content">
+          <!-- Content question here -->
+          <component :is="questionComponents[currentPage]" />
+          <!-- Button -->
+          <div class="btn">
+            <b-button
+              @click="prevPage()"
+              v-show="currentPage !== 0"
+              variant="danger"
+              class="font-weight-bold"
+              >Kembali</b-button
+            >
+            <b-button
+              @click="nextPage()"
+              variant="danger"
+              :class="{ 'right-align': currentPage === 0 }"
+              >Lanjut</b-button
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -150,9 +152,12 @@ export default {
   border-radius: 10px;
 }
 
+.content {
+  padding: 20px 40px;
+}
+
 .btn {
   padding: 5px 20px;
-  border: solid 3px red;
   display: flex;
   justify-content: space-between;
 }

@@ -1,28 +1,20 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import AboutView from "../views/AboutView.vue";
 import HomeView from "../views/Homepage/HomeView.vue";
-import SurveyView from "../views/SurveyView.vue";
+import QuestionView from "../views/Survey/QuestionView.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: SurveyView,
-    children: [
-      {
-        path: "/",
-        name: "home",
-        component: HomeView,
-      },
-      {
-        path: "about",
-        name: "about",
-        component: AboutView,
-      },
-    ],
+    name: "home",
+    component: HomeView,
+  },
+  {
+    path: "/question",
+    name: "Question",
+    component: QuestionView,
   },
 ];
 

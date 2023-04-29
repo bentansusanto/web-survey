@@ -4,6 +4,9 @@
       <SideNav />
       <ContentView />
     </div>
+    <div class="bg-logo">
+      <img src="../../assets/logo-client.svg" alt="logo-client.svg" />
+    </div>
     <div class="bg-list"></div>
   </div>
 </template>
@@ -21,6 +24,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.home {
+  position: relative;
+}
 .grid-component {
   display: flex;
   flex-direction: row;
@@ -30,5 +36,15 @@ export default {
   background-color: #d1d1d1;
   width: 100vw;
   height: 5vh;
+}
+
+.bg-logo {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  background-color: white;
+  width: 12rem;
+  padding: 3px;
+  z-index: 2;
 }
 </style>

@@ -8,8 +8,11 @@ export default {};
 
 <style lang="scss" scoped>
 .side-background {
-  background: #770000;
-  width: 30vw;
-  height: 95vh;
+  background: url("../../assets/bg-side-opening.webp");
+  width: 50vw;
+  height: 96vh;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%);
 }
 </style>

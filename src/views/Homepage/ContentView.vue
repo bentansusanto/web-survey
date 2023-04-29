@@ -1,7 +1,9 @@
 <template>
-  <div class="bg-content">
-    <NavbarHome />
-    <OpeningHome />
+  <div class="content">
+    <div class="bg-content">
+      <NavbarHome />
+      <OpeningHome />
+    </div>
   </div>
 </template>
 
@@ -18,6 +20,6 @@ export default {
 
 <style lang="scss" scoped>
 .bg-content {
-  width: 70%;
+  width: 100%;
 }
 </style>

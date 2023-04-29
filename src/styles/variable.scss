@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 *{
     margin: 0;
@@ -7,7 +6,12 @@
 
 body{
     overflow-x: hidden;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins',sans-serif;
+    background: url('../assets/bg-survey.webp');
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
 }
 
 p, h1, h2, h4, li{

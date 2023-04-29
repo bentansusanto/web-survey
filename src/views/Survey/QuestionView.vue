@@ -82,7 +82,7 @@ export default {
   data() {
     return {
       currentPage: 0,
-      progressWidth: "10px",
+      progressWidth: "150px",
       questionComponents: [
         Question1,
         Question2,

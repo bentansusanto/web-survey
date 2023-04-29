@@ -13,13 +13,18 @@
     </div>
     <p class="text-dark py-3">Ut enim ad minim veniam</p>
     <div class="select-data">
-      <div class="checklist">
-        <img src="../../../assets/checklist.svg" alt="checklist.svg" />
-        <p>Ya, saya mau</p>
-      </div>
-      <div class="cross">
-        <img src="../../../assets/cross.svg" alt="cross.svg" />
-        <p>Saya tidak mau</p>
+      <div
+        v-for="(item, index) in chooses"
+        :key="index"
+        class="check"
+        :style="{
+          backgroundColor: selectIndex == index ? '#fbcbcd' : '#e9e9e9',
+          border: selectIndex == index ? borderChooses : null,
+        }"
+        @click="chooseData(index)"
+      >
+        <img :src="item.icon" alt="" />
+        <p>{{ item.text }}</p>
       </div>
     </div>
   </div>
@@ -28,12 +33,35 @@
 <script>
 export default {
   name: "Question1View",
+  data() {
+    return {
+      chooses: [
+        {
+          icon: require("../../../assets/checklist.svg"),
+          text: "Ya, saya mau",
+        },
+        {
+          icon: require("../../../assets/cross.svg"),
+          text: "Saya tidak mau",
+        },
+      ],
+      selectIndex: 0,
+      borderChooses: "solid 1px red",
+    };
+  },
+  methods: {
+    chooseData(index) {
+      this.selectIndex = index;
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .question1 h5 {
   color: #d72029;
+  // color: #fbcbcd;
+
   font-size: 14px;
   font-weight: 600;
 }
@@ -60,14 +88,13 @@ export default {
   justify-content: space-between;
   margin: 20px 50px;
 }
-.checklist {
-  background-color: #e9e9e9;
+.check {
   padding: 20px 40px;
   text-align: center;
+  border-radius: 5px;
 }
-.cross {
-  background-color: #e9e9e9;
-  padding: 20px 40px;
-  margin-left: 10px;
+
+.check img {
+  margin: 0 10px;
 }
 </style>

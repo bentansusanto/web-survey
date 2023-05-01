@@ -97,6 +97,8 @@ export default {
       if (this.currentPage < this.questionComponents.length - 1) {
         this.currentPage++;
         this.updateProgress();
+      } else {
+        this.$router.push("/closing");
       }
     },
     prevPage() {

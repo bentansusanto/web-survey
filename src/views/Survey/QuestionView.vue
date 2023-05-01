@@ -38,8 +38,9 @@
             <b-button
               @click="prevPage()"
               v-show="currentPage !== 0"
-              variant="danger"
-              class="font-weight-bold"
+              squared
+              variant="outline-danger"
+              style="background-color: none; border-radius: 10px"
               >Kembali</b-button
             >
             <b-button
@@ -159,7 +160,7 @@ export default {
 // }
 
 .btn {
-  margin: 5px 20px;
+  margin: 0 20px;
   display: flex;
   justify-content: space-between;
 }

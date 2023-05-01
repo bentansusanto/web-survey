@@ -59,7 +59,7 @@ export default {
 }
 .question2 p {
   // color: black;
-  font-size: 14px;
+  font-size: 15px;
   margin: 15px 20px;
 }
 
@@ -75,7 +75,7 @@ export default {
 
 .listData {
   padding: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   box-shadow: 0 10px 20px 0 rgba($color: #4e4e4e29, $alpha: 0.1);
   border-radius: 5px;
 }

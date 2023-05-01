@@ -152,12 +152,12 @@ export default {
   border-radius: 10px;
 }
 
-.content {
-  padding: 20px 40px;
-}
+// .content {
+//   padding: 20px 40px;
+// }
 
 .btn {
-  padding: 5px 20px;
+  margin: 5px 20px;
   display: flex;
   justify-content: space-between;
 }

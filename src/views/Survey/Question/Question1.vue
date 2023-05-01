@@ -45,7 +45,7 @@ export default {
           text: "Saya tidak mau",
         },
       ],
-      selectIndex: 0,
+      selectIndex: -1,
       borderChooses: "solid 1px red",
     };
   },
@@ -58,6 +58,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.question1 {
+  padding: 10px 20px;
+}
 .question1 h5 {
   color: #d72029;
   // color: #fbcbcd;

@@ -15,7 +15,10 @@
     </div>
     <div>
       <div class="bg-question" />
-      <div class="question">
+      <div
+        class="question"
+        :style="{ width: currentPage == 3 ? '60%' : '40%' }"
+      >
         <div class="progress">
           <div class="bg-persentase">
             <div
@@ -43,12 +46,21 @@
               style="background-color: none; border-radius: 10px"
               >Kembali</b-button
             >
-            <b-button
-              @click="nextPage()"
-              variant="danger"
-              :class="{ 'right-align': currentPage === 0 }"
-              >Lanjut</b-button
-            >
+            <div class="button-next" style="display: flex; margin-left: auto">
+              <b-button
+                style="margin-left: 20px"
+                @click="prevPage()"
+                v-show="currentPage == 3"
+                variant="danger"
+                >Undo</b-button
+              >
+              <b-button
+                @click="nextPage()"
+                variant="danger"
+                :class="{ 'right-align': currentPage === 0 }"
+                >Lanjut</b-button
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -112,6 +124,9 @@ export default {
       const percent =
         ((this.currentPage + 1) / this.questionComponents.length) * 100;
       this.progressWidth = `${percent}%`;
+      if (this.currentPage === 3) {
+        this.progressWidth = "80%";
+      }
     },
   },
 };
@@ -145,14 +160,13 @@ export default {
 }
 .question {
   background-color: white;
-  width: 40vw;
   height: 75vh;
   z-index: 2;
   position: absolute;
   inset: 0;
   top: 10rem;
-  margin: 10px auto;
   border-radius: 10px;
+  margin: 10px auto;
 }
 
 // .content {
